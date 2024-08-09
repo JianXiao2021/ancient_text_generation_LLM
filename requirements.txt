@@ -1,0 +1,10 @@
+datasets
+gradio
+huggingface_hub
+jieba
+numpy
+peft
+rouge_chinese
+swanlab
+tqdm
+transformers
