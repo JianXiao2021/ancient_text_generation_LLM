@@ -90,7 +90,7 @@ trainer = Trainer(
 )
 
 # 开始微调
-trainer.train(resume_from_checkpoint = True)
+trainer.train()
 print("微调完成！")
 
 swanlab.finish()

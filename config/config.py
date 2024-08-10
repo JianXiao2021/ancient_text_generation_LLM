@@ -1,4 +1,4 @@
-BASE_MODEL_NAME = "Xunzi-Qwen2-7B"
+BASE_MODEL_NAME = "Xunzi-Qwen2-1.5B"
 BASE_MODELS_PATH = "E:\\LLM\\downloaded_models"
 FINE_TUNED_MODELS_PATH = "E:\\LLM\\fine_tuned_models"
 DATA_PATH = "E:\\LLM\\fine_tuning_test\\data"

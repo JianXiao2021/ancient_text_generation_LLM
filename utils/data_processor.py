@@ -61,9 +61,9 @@ class DatasetProcessor():
         else:
             tokenized_dataset = dataset.map(
                 self.process_func,
-                batched=True,
+                # batched=True,  # sometimes batch processing will cause error
                 remove_columns=dataset.column_names,
             )
-            tokenized_dataset = tokenized_dataset['train']
+
             tokenized_dataset.save_to_disk(tokenized_dataset_path)
         return tokenized_dataset
