@@ -39,6 +39,7 @@ if traning_args_dict["do_eval"]:
         tokenized_validation_dataset = data_prcocessor.get_tokenized_dataset(validation_dataset, data_path, 'validation')
 
 # 创建LoRA配置
+print(f"LoRA配置：{lora_config_dict}")
 lora_config_dict['task_type'] = TaskType.CAUSAL_LM
 config = LoraConfig(**lora_config_dict)
 
@@ -47,6 +48,7 @@ model = get_peft_model(model, config)
 model.print_trainable_parameters()
 
 # 创建微调参数
+print(f"微调超参：{traning_args_dict}")
 traning_args_dict["output_dir"] = output_dir
 args = TrainingArguments(**traning_args_dict)
 
