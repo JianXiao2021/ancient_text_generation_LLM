@@ -12,7 +12,7 @@ max_source_length = 256  # max length of the original text
 max_target_length = 128  # max length of the target text
 output_dir = os.path.join(FINE_TUNED_MODELS_PATH, BASE_MODEL_NAME + '_checkpoints')
 swanlab_project_name = BASE_MODEL_NAME.replace(".", "_") + "_finetune_project"
-swanlab_experiment_name = BASE_MODEL_NAME.replace(".", "_") + "_finetune_experiment"
+swanlab_experiment_name = BASE_MODEL_NAME.replace(".", "_") + "_finetune_experiment3"
 
 # 加载预训练模型和分词器
 model_path = os.path.join(BASE_MODELS_PATH, BASE_MODEL_NAME)
@@ -66,6 +66,7 @@ trainer = Trainer(
 )
 
 # 开始微调
+# trainer.train(resume_from_checkpoint = True)
 trainer.train()
 print("微调完成！")
 
