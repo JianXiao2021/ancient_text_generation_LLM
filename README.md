@@ -1,10 +1,18 @@
 # 古文生成大模型
 
+
 ## 简介
 基于[荀子基座大模型](https://github.com/Xunzi-LLM-of-Chinese-classics/XunziALLM)，采用“[文言文（古文）- 现代文平行语料](https://github.com/NiuTrans/Classical-Modern)”中的部分数据进行LoRA微调训练，可以将现代文句子转化为古文。
 
+试用：https://huggingface.co/spaces/cofeg/ancient_Chinese_text_generator_1.5B
+
+模型链接：https://huggingface.co/cofeg/Finetuned-Xunzi-Qwen2-1.5B-for-ancient-text-generation/
+
+该模型基于[Xunzi-Qwen2-1.5B](https://www.modelscope.cn/models/Xunzillm4cc/Xunzi-Qwen2-1.5B)微调。
+
+
 ## 完整的LoRA微调工作流
-1. 运行 `pip install -r requirements.txt` 安装依赖（pytorch未列出，需根据自己电脑硬件情况安装合适版本）
+1. 运行 `pip install -r requirements.txt` 安装依赖（pytorch 未列出，需要先通过 `nvcc --version` 命令查看自己电脑的 CUDA 版本，然后到 pytorch 官网安装对应 CUDA 版本的 pytorch）
 2. 下载要微调的基座大模型
 3. 准备现代文-古文对照数据，放入 data/original 文件夹中
 4. 在 `config/config.py` 文件中配置好基座模型路径和名称、数据路径、微调后的模型存放路径和名称、训练使用cuda还是cpu等
