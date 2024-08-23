@@ -22,6 +22,9 @@ def split_and_generate(modern_text):
                 yield responses
 
 demo = gr.Interface(fn=split_and_generate,
-                        inputs=[gr.Textbox(label="现代文", lines=10)],
-                        outputs=[gr.Textbox(label="古文", lines=10)])
+                    inputs=[gr.Textbox(label="现代文", lines=10)],
+                    outputs=[gr.Textbox(label="古文", lines=10)],
+                    title="现代文转古文大模型",
+                    description="请在左边对话框输入你要转换的现代文并点击“Submit”按钮，耐心等待一两分钟，右边的对话框将显示转换后的古文。<br>由于训练数据来源于《徐霞客游记》，故对游记类文字转换效果较好。<br>详情请访问本项目[GitHub主页](https://github.com/JianXiao2021/ancient_text_generation_LLM)。"
+)
 demo.launch()

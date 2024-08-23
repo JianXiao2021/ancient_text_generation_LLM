@@ -1,17 +1,24 @@
-# 古文生成大模型
+<p align="left">
+    中文&nbsp ｜ &nbsp<a href="./README_en.md">English</a>
+</p>
 
+# 现代文转古文大模型
 
 ## 简介
-基于[荀子基座大模型](https://github.com/Xunzi-LLM-of-Chinese-classics/XunziALLM)，采用“[文言文（古文）- 现代文平行语料](https://github.com/NiuTrans/Classical-Modern)”中的部分数据进行LoRA微调训练，可以将现代文句子转化为古文。
 
-试用：https://huggingface.co/spaces/cofeg/ancient_Chinese_text_generator_1.5B
+输入现代汉语句子，生成古汉语风格的句子。基于[荀子基座大模型](https://www.modelscope.cn/models/Xunzillm4cc/Xunzi-Qwen2-1.5B)，采用“[文言文（古文）- 现代文平行语料](https://github.com/NiuTrans/Classical-Modern)”中的部分数据进行LoRA微调训练而得。
 
-模型链接：https://huggingface.co/cofeg/Finetuned-Xunzi-Qwen2-1.5B-for-ancient-text-generation/
+欢迎访问以下链接试用：
+ - https://modelscope.cn/studios/chostem/ancient_Chinese_text_generator
+ - https://huggingface.co/spaces/cofeg/ancient_Chinese_text_generator_1.5B
 
-该模型基于[Xunzi-Qwen2-1.5B](https://www.modelscope.cn/models/Xunzillm4cc/Xunzi-Qwen2-1.5B)微调。
+模型链接：
+ - ModelScope 链接：https://modelscope.cn/models/chostem/finetuned_Xunzi_Qwen2_1d5B_for_ancient_text_generation/
+ - Hugging Face 链接：https://huggingface.co/cofeg/Finetuned-Xunzi-Qwen2-1.5B-for-ancient-text-generation/
 
 
 ## 完整的LoRA微调工作流
+
 1. 运行 `pip install -r requirements.txt` 安装依赖（pytorch 未列出，需要先通过 `nvcc --version` 命令查看自己电脑的 CUDA 版本，然后到 pytorch 官网安装对应 CUDA 版本的 pytorch）
 2. 下载要微调的基座大模型
 3. 准备现代文-古文对照数据，放入 data/original 文件夹中
