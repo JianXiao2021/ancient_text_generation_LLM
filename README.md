@@ -13,8 +13,8 @@
  - https://huggingface.co/spaces/cofeg/ancient_Chinese_text_generator_1.5B
 
 模型链接：
- - ModelScope 链接：https://modelscope.cn/models/chostem/finetuned_Xunzi_Qwen2_1d5B_for_ancient_text_generation/
- - Hugging Face 链接：https://huggingface.co/cofeg/Finetuned-Xunzi-Qwen2-1.5B-for-ancient-text-generation/
+ - [ModelScope](https://modelscope.cn/models/chostem/finetuned_Xunzi_Qwen2_1d5B_for_ancient_text_generation/)
+ - [Hugging Face](https://huggingface.co/cofeg/Finetuned-Xunzi-Qwen2-1.5B-for-ancient-text-generation/)
 
 
 ## 完整的LoRA微调工作流
