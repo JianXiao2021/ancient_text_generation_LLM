@@ -13,6 +13,11 @@ client = InferenceClient(model=hugging_face_model_path, token=HUGGING_FACE_TOKEN
 def split_and_generate(modern_text):
     # Split the input text into sentences for the model is trained on sentence pairs
     sentences = re.findall(r'[^。！？]*[。！？]', modern_text)
+
+    # If no sentences are found, treat the entire input as one sentence
+    if not sentences:
+        sentences = [modern_text]
+
     responses = ""
     for sentence in sentences:
         input = "现代文：" + sentence + " 古文："

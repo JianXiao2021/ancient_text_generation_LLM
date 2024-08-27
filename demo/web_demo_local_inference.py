@@ -16,6 +16,11 @@ def split_and_generate(modern_text, progress=gr.Progress()):
     progress(0, desc="开始处理")
     # Split the input text into sentences for the model is trained on sentence pairs
     sentences = re.findall(r'[^。！？]*[。！？]', modern_text)
+    
+    # If no sentences are found, treat the entire input as one sentence
+    if not sentences:
+        sentences = [modern_text]
+    
     responses = ""
     for sentence in progress.tqdm(sentences, desc="生成中……"):
         input = "现代文：" + sentence + " 古文："
